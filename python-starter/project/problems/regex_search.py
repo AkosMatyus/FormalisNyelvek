@@ -24,7 +24,7 @@ TASK1_PATTERNS = [
     r'^[0-9-]+ 10:18:51\.[0-9]+ +221 +[0-9]+ ',  # at 10:18:51 with process id 221
     HEAD + r'E ',                                # errors
     HEAD + r'W PackageManager *:',               # warnings sent by PackageManager
-    HEAD + r'D [^:]*ExoPlayer[^:]*:',            # ExoPlayer debug lines
+    HEAD + r'D .*ExoPlayer',                     # ExoPlayer debug lines (anywhere in the line)
     HEAD + r'[EW] .*\.java:',                    # errors and warnings with a java file position
     HEAD + r'[IDVEFAW] [^:]+: .*Thread',         # "Thread" in the message (after "tag: ")
 ]
